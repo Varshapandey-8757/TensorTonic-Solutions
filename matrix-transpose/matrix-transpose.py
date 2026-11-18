@@ -1,0 +1,15 @@
+import numpy as np
+
+def matrix_transpose(A):
+    """
+    Returns the transposed matrix as a NumPy array.
+    """
+    # Write code here
+    A = np.array(A)
+    rows,cols  = A.shape
+    result = np.zeros((cols,rows),dtype = A.dtype)
+    for i in range(rows):
+        for j in range(cols):
+            result[j][i] = A[i][j]
+
+    return result
